@@ -1,0 +1,19 @@
+.carcontrol {
+  display: flex;
+  align-items: center;
+  color: #00a0dc;
+  font-size: 20px; }
+  .carcontrol .transition-wrap {
+    display: flex; }
+    .carcontrol .transition-wrap .move-enter-active {
+      transition: all 0.5s; }
+    .carcontrol .transition-wrap .move-enter, .carcontrol .transition-wrap .move-leave-to {
+      transform: translate3d(24px, 0, 0); }
+    .carcontrol .transition-wrap .cart-count {
+      line-height: 20px;
+      font-size: 10px;
+      color: #93999f;
+      width: 24px;
+      text-align: center; }
+
+/*# sourceMappingURL=carcontrol.css.map */

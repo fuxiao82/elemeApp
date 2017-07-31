@@ -1,0 +1,20 @@
+@import "../../../static/common"
+
+.star-group
+  .stars
+    display: flex
+    justify-content: space-between
+
+    .star
+      width: 18px
+      height: 18px
+
+      @include bg-image('img/star36_off')
+
+      &.star-on
+        @include bg-image('img/star36_on')
+
+
+      &.star-half
+        @include bg-image('img/star36_half')
+

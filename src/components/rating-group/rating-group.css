@@ -1,0 +1,264 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+@import url(../../../static/custom/icon.css);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* custom */
+a {
+  color: #7e8c8d;
+  text-decoration: none;
+  -webkit-backface-visibility: hidden; }
+
+li {
+  list-style: none; }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px; }
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px; }
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px; }
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px; }
+
+html, body {
+  width: 100%; }
+
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent; }
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+@media (-webkit-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.7);
+    transform: scaleY(0.7); } }
+@media (-webkit-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5); } }
+@media (-webkit-device-pixel-ratio: 1), (min-device-pixel-ratio: 1) {
+  .border-1px::after {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1); } }
+.clearfix {
+  display: inline-block; }
+  .clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden; }
+
+.rating-group .like-tab {
+  display: flex;
+  padding: 18px;
+  position: relative; }
+  .rating-group .like-tab::after {
+    position: absolute;
+    content: "";
+    border-top: 1px solid rgba(7, 17, 27, 0.1);
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    display: block; }
+  .rating-group .like-tab .tab-item {
+    font-size: 12px;
+    margin-left: 10px;
+    padding: 8px;
+    border-radius: 2px; }
+    .rating-group .like-tab .tab-item:first-child {
+      margin-left: 0; }
+    .rating-group .like-tab .tab-item.active {
+      color: #fff; }
+    .rating-group .like-tab .tab-item .num {
+      font-size: 10px; }
+  .rating-group .like-tab .all {
+    background-color: #00A0DC; }
+  .rating-group .like-tab .like {
+    background-color: #CCECF8; }
+  .rating-group .like-tab .unlike {
+    background-color: #E9EBEC; }
+.rating-group .with-content {
+  display: flex;
+  position: relative;
+  padding: 18px; }
+  .rating-group .with-content::after {
+    position: absolute;
+    content: "";
+    border-top: 1px solid rgba(7, 17, 27, 0.1);
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    display: block; }
+  .rating-group .with-content .icon {
+    color: #B7BBBF;
+    font-size: 20px; }
+    .rating-group .with-content .icon.active {
+      color: #00a0dc; }
+  .rating-group .with-content .des {
+    margin-left: 10px; }
+.rating-group .rating-list {
+  max-height: 350px;
+  overflow: hidden; }
+  .rating-group .rating-list .up-down {
+    font-size: 12px;
+    line-height: 16px; }
+    .rating-group .rating-list .up-down.icon-thumb_up {
+      color: #02A1DC; }
+    .rating-group .rating-list .up-down.icon-thumb_down {
+      color: #B7BBBF; }
+  .rating-group .rating-list .rating-ul .rating-li {
+    display: flex;
+    padding: 18px 0;
+    margin: 0 18px;
+    position: relative; }
+    .rating-group .rating-list .rating-ul .rating-li::after {
+      position: absolute;
+      content: "";
+      border-top: 1px solid rgba(7, 17, 27, 0.1);
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      display: block; }
+    .rating-group .rating-list .rating-ul .rating-li .right-wrap {
+      width: 100%;
+      margin-left: 12px; }
+      .rating-group .rating-list .rating-ul .rating-li .right-wrap .from-time {
+        display: flex;
+        justify-content: space-between; }
+        .rating-group .rating-list .rating-ul .rating-li .right-wrap .from-time .from {
+          font-size: 10px;
+          color: #07111b;
+          line-height: 12px; }
+        .rating-group .rating-list .rating-ul .rating-li .right-wrap .from-time .time {
+          font-size: 10px;
+          color: #93999f;
+          line-height: 12px; }
+      .rating-group .rating-list .rating-ul .rating-li .right-wrap .star-time {
+        margin-top: 4px;
+        display: flex; }
+        .rating-group .rating-list .rating-ul .rating-li .right-wrap .star-time .star-rate {
+          padding-right: 6px; }
+        .rating-group .rating-list .rating-ul .rating-li .right-wrap .star-time .delivery-time {
+          font-size: 10px;
+          color: #93999f;
+          line-height: 12px; }
+      .rating-group .rating-list .rating-ul .rating-li .right-wrap .rating-content {
+        font-size: 12px;
+        color: #07111b;
+        line-height: 18px;
+        margin-top: 6px; }
+      .rating-group .rating-list .rating-ul .rating-li .right-wrap .des {
+        margin-top: 8px;
+        display: flex; }
+        .rating-group .rating-list .rating-ul .rating-li .right-wrap .des .recommends {
+          display: flex;
+          flex-wrap: wrap; }
+          .rating-group .rating-list .rating-ul .rating-li .right-wrap .des .recommends .recommend {
+            border: 1px solid rgba(7, 17, 27, 0.1);
+            border-radius: 2px;
+            background-color: #ffffff;
+            padding: 0 6px;
+            box-sizing: border-box;
+            line-height: 16px;
+            max-width: 108px;
+            margin-left: 6px;
+            font-size: 9px;
+            color: #93999f; }
+            .rating-group .rating-list .rating-ul .rating-li .right-wrap .des .recommends .recommend:first-child {
+              margin-left: 0; }
+  .rating-group .rating-list .normal-rating-ul .rating-li {
+    padding: 16px 0;
+    margin: 0 18px;
+    position: relative; }
+    .rating-group .rating-list .normal-rating-ul .rating-li::after {
+      position: absolute;
+      content: "";
+      border-top: 1px solid rgba(7, 17, 27, 0.1);
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      display: block; }
+    .rating-group .rating-list .normal-rating-ul .rating-li .top-line {
+      display: flex;
+      justify-content: space-between; }
+      .rating-group .rating-list .normal-rating-ul .rating-li .top-line .time {
+        font-size: 10px;
+        color: #93999f;
+        line-height: 12px; }
+      .rating-group .rating-list .normal-rating-ul .rating-li .top-line .from-img {
+        display: flex; }
+        .rating-group .rating-list .normal-rating-ul .rating-li .top-line .from-img .from {
+          font-size: 10px;
+          color: #93999f;
+          line-height: 12px; }
+        .rating-group .rating-list .normal-rating-ul .rating-li .top-line .from-img .avatar {
+          margin: 0 0 0 6px;
+          border-radius: 50%; }
+    .rating-group .rating-list .normal-rating-ul .rating-li .bottom-line {
+      display: flex; }
+      .rating-group .rating-list .normal-rating-ul .rating-li .bottom-line .rating-content {
+        margin: 0 0 0 4px;
+        font-size: 12px;
+        color: #07111b;
+        line-height: 16px; }
+
+/*# sourceMappingURL=rating-group.css.map */

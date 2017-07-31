@@ -1,0 +1,173 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* custom */
+a {
+  color: #7e8c8d;
+  text-decoration: none;
+  -webkit-backface-visibility: hidden; }
+
+li {
+  list-style: none; }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px; }
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px; }
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px; }
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px; }
+
+html, body {
+  width: 100%; }
+
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent; }
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+@media (-webkit-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.7);
+    transform: scaleY(0.7); } }
+@media (-webkit-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5); } }
+@media (-webkit-device-pixel-ratio: 1), (min-device-pixel-ratio: 1) {
+  .border-1px::after {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1); } }
+.clearfix {
+  display: inline-block; }
+  .clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden; }
+
+.food-detail {
+  background-color: #fff;
+  width: 100%; }
+  .food-detail .food-detail-wrap .img-wrap {
+    padding: 0 1px;
+    position: relative; }
+    .food-detail .food-detail-wrap .img-wrap::after {
+      position: absolute;
+      content: "";
+      border-top: 1px solid white;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      display: block; }
+    .food-detail .food-detail-wrap .img-wrap > img {
+      width: 100%; }
+  .food-detail .food-detail-wrap .food-title-info {
+    padding: 18px;
+    box-sizing: border-box; }
+    .food-detail .food-detail-wrap .food-title-info .title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #07111b;
+      line-height: 14px; }
+    .food-detail .food-detail-wrap .food-title-info .sell-info {
+      margin: 8px 0 0 0;
+      font-size: 10px;
+      color: #93999f;
+      line-height: 10px;
+      display: flex; }
+      .food-detail .food-detail-wrap .food-title-info .sell-info .rating-percent {
+        margin: 0 0 0 12px; }
+    .food-detail .food-detail-wrap .food-title-info .price-card {
+      display: flex;
+      justify-content: space-between;
+      margin: 18px 0 0 0;
+      font-size: 14px;
+      font-weight: 700;
+      color: #f01414;
+      line-height: 24px; }
+      .food-detail .food-detail-wrap .food-title-info .price-card .add-to-cart .add-btn {
+        min-width: 74px;
+        height: 24px;
+        padding: 0 12px;
+        font-size: 12px;
+        border-radius: 12px;
+        color: #fff;
+        background-color: #00a0dc;
+        border: none; }
+  .food-detail .food-detail-wrap .food-des {
+    padding: 18px; }
+    .food-detail .food-detail-wrap .food-des .title {
+      font-size: 14px;
+      color: #07111b;
+      line-height: 14px; }
+    .food-detail .food-detail-wrap .food-des .description {
+      font-size: 12px;
+      color: #4d555d;
+      line-height: 24px;
+      padding: 0 8px;
+      margin: 6px 0 0 0; }
+  .food-detail .food-detail-wrap .food-rating .title {
+    font-size: 14px;
+    color: #07111b;
+    line-height: 14px;
+    padding: 18px 18px 0 18px; }
+
+/*# sourceMappingURL=food.css.map */

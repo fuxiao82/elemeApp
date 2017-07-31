@@ -1,0 +1,293 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* custom */
+a {
+  color: #7e8c8d;
+  text-decoration: none;
+  -webkit-backface-visibility: hidden; }
+
+li {
+  list-style: none; }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px; }
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px; }
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px; }
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px; }
+
+html, body {
+  width: 100%; }
+
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent; }
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+@media (-webkit-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.7);
+    transform: scaleY(0.7); } }
+@media (-webkit-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5); } }
+@media (-webkit-device-pixel-ratio: 1), (min-device-pixel-ratio: 1) {
+  .border-1px::after {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1); } }
+.clearfix {
+  display: inline-block; }
+  .clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden; }
+
+.goods-wrap {
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 185px;
+  bottom: 48px; }
+  .goods-wrap.active-food {
+    top: 0;
+    z-index: 10; }
+  .goods-wrap .menu-wrap {
+    width: 80px;
+    min-height: 100%;
+    flex: 0 0 80px; }
+    .goods-wrap .menu-wrap .menu-box {
+      background: #f3f5f7; }
+      .goods-wrap .menu-wrap .menu-box.active {
+        background: #fff; }
+        .goods-wrap .menu-wrap .menu-box.active .menu-item {
+          color: #2a3037; }
+      .goods-wrap .menu-wrap .menu-box .menu-item {
+        height: 54px;
+        width: 56px;
+        font-size: 12px;
+        color: #07111b;
+        line-height: 14px;
+        display: table;
+        padding: 0 12px;
+        position: relative; }
+        .goods-wrap .menu-wrap .menu-box .menu-item::after {
+          position: absolute;
+          content: "";
+          border-top: 1px solid rgba(7, 17, 27, 0.1);
+          left: 0;
+          bottom: 0;
+          height: 1px;
+          width: 100%;
+          display: block; }
+        .goods-wrap .menu-wrap .menu-box .menu-item .icon.decrease:before {
+          content: "";
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          background-size: 12px 12px;
+          background-image: url("img/decrease_3@2x.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          vertical-align: middle;
+          margin-right: 2px; }
+          @media (-webkit-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3) {
+            .goods-wrap .menu-wrap .menu-box .menu-item .icon.decrease:before {
+              background-image: url("img/decrease_3@3x.png"); } }
+        .goods-wrap .menu-wrap .menu-box .menu-item .icon.discount:before {
+          content: "";
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          background-size: 12px 12px;
+          background-image: url("img/discount_3@2x.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          vertical-align: middle;
+          margin-right: 2px; }
+          @media (-webkit-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3) {
+            .goods-wrap .menu-wrap .menu-box .menu-item .icon.discount:before {
+              background-image: url("img/discount_3@3x.png"); } }
+        .goods-wrap .menu-wrap .menu-box .menu-item .icon.guarantee:before {
+          content: "";
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          background-size: 12px 12px;
+          background-image: url("img/guarantee_3@2x.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          vertical-align: middle;
+          margin-right: 2px; }
+          @media (-webkit-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3) {
+            .goods-wrap .menu-wrap .menu-box .menu-item .icon.guarantee:before {
+              background-image: url("img/guarantee_3@3x.png"); } }
+        .goods-wrap .menu-wrap .menu-box .menu-item .icon.invoice:before {
+          content: "";
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          background-size: 12px 12px;
+          background-image: url("img/invoice_3@2x.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          vertical-align: middle;
+          margin-right: 2px; }
+          @media (-webkit-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3) {
+            .goods-wrap .menu-wrap .menu-box .menu-item .icon.invoice:before {
+              background-image: url("img/invoice_3@3x.png"); } }
+        .goods-wrap .menu-wrap .menu-box .menu-item .icon.special:before {
+          content: "";
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          background-size: 12px 12px;
+          background-image: url("img/special_3@2x.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          vertical-align: middle;
+          margin-right: 2px; }
+          @media (-webkit-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3) {
+            .goods-wrap .menu-wrap .menu-box .menu-item .icon.special:before {
+              background-image: url("img/special_3@3x.png"); } }
+        .goods-wrap .menu-wrap .menu-box .menu-item .text {
+          display: table-cell;
+          vertical-align: middle; }
+  .goods-wrap .foods-wrap {
+    flex: 1; }
+    .goods-wrap .foods-wrap .foods-box .menu-name {
+      font-size: 12px;
+      color: #93999f;
+      line-height: 26px;
+      border-left: 2px solid #d9dde1;
+      background: #f3f5f7;
+      height: 26px;
+      padding-left: 14px; }
+    .goods-wrap .foods-wrap .foods-box .food-item {
+      display: flex;
+      margin: 0 18px;
+      padding: 18px 0;
+      position: relative; }
+      .goods-wrap .foods-wrap .foods-box .food-item::after {
+        position: absolute;
+        content: "";
+        border-top: 1px solid rgba(7, 17, 27, 0.1);
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        display: block; }
+      .goods-wrap .foods-wrap .foods-box .food-item .food-icon {
+        flex: 0 0 57px;
+        display: block; }
+      .goods-wrap .foods-wrap .foods-box .food-item .food-detail {
+        margin-left: 10px;
+        flex: 1; }
+        .goods-wrap .foods-wrap .foods-box .food-item .food-detail .food-name {
+          margin: 2px 0 8px 0;
+          font-size: 14px;
+          color: #07111b;
+          line-height: 10px; }
+        .goods-wrap .foods-wrap .foods-box .food-item .food-detail .food-des {
+          font-size: 10px;
+          color: #93999f;
+          line-height: 14px;
+          margin-bottom: 8px; }
+        .goods-wrap .foods-wrap .foods-box .food-item .food-detail .sell-rating {
+          display: flex; }
+          .goods-wrap .foods-wrap .foods-box .food-item .food-detail .sell-rating .month-sell,
+          .goods-wrap .foods-wrap .foods-box .food-item .food-detail .sell-rating .food-rating {
+            font-size: 10px;
+            color: #93999f;
+            line-height: 14px; }
+          .goods-wrap .foods-wrap .foods-box .food-item .food-detail .sell-rating .month-sell {
+            margin-right: 12px; }
+        .goods-wrap .foods-wrap .foods-box .food-item .food-detail .price-card {
+          display: flex;
+          justify-content: space-between; }
+          .goods-wrap .foods-wrap .foods-box .food-item .food-detail .price-card .now-old-price {
+            display: flex; }
+            .goods-wrap .foods-wrap .foods-box .food-item .food-detail .price-card .now-old-price .food-price-now {
+              font-size: 14px;
+              line-height: 24px;
+              color: #f01414;
+              font-weight: 700;
+              margin-right: 8px; }
+              .goods-wrap .foods-wrap .foods-box .food-item .food-detail .price-card .now-old-price .food-price-now .price-icon {
+                font-size: 10px;
+                font-weight: normal; }
+            .goods-wrap .foods-wrap .foods-box .food-item .food-detail .price-card .now-old-price .food-old-price {
+              font-size: 10px;
+              color: #93999f;
+              font-weight: 700;
+              line-height: 24px;
+              text-decoration: line-through; }
+              .goods-wrap .foods-wrap .foods-box .food-item .food-detail .price-card .now-old-price .food-old-price .price-icon {
+                font-weight: normal; }
+  .goods-wrap .slide-right-enter-active {
+    transition: all 1s; }
+  .goods-wrap .slide-right-enter, .goods-wrap .slide-right-leave-to {
+    transform: translate(100%, 0); }
+
+/*# sourceMappingURL=goods.css.map */

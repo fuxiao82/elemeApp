@@ -1,0 +1,166 @@
+@import "../../../static/common"
+
+.goods-wrap
+  display: flex
+  overflow: hidden
+  position: absolute
+  left: 0
+  right: 0
+  top: 185px
+  bottom: 48px
+
+  &.active-food
+    top: 0
+    z-index: 10
+
+  .menu-wrap
+    width: 80px
+    min-height: 100%
+    flex: 0 0 80px
+
+    .menu-box
+      background: #f3f5f7
+
+      &.active
+        background: #fff
+
+        .menu-item
+          color: #2a3037
+
+      .menu-item
+        height: 54px
+        width: 56px
+        font-size: 12px
+        color: #07111b
+        line-height: 14px
+        display: table
+        padding: 0 12px
+        @include border-1px(rgba(7,17,27, .1))
+
+
+        .icon
+          &.decrease
+            @include with-icon("img/decrease_3", 12px)
+          &.discount
+            @include with-icon("img/discount_3", 12px)
+          &.guarantee
+            @include with-icon("img/guarantee_3", 12px)
+          &.invoice
+            @include with-icon("img/invoice_3", 12px)
+          &.special
+            @include with-icon("img/special_3", 12px)
+
+        .text
+          display: table-cell
+          vertical-align: middle
+
+  .foods-wrap
+    //overflow: auto
+    flex: 1
+
+    .foods-box
+      .menu-name
+        font-size: 12px
+        color: rgb(147, 153, 159)
+        line-height: 26px
+        border-left: 2px solid #d9dde1
+        background: #f3f5f7
+        height: 26px
+        padding-left: 14px
+
+      .food-item
+        display: flex
+        margin: 0 18px
+        padding: 18px 0
+        @include border-1px(rgba(7, 17, 27, .1))
+
+        .food-icon
+          flex: 0 0 57px
+          display: block
+
+        .food-detail
+          margin-left: 10px
+          flex: 1
+
+          .food-name
+            margin: 2px 0 8px 0
+            font-size: 14px
+            color: rgb(7, 17, 27)
+            line-height: 10px
+
+          .food-des
+            font-size: 10px
+            color: rgb(147, 153, 159)
+            line-height: 14px
+            margin-bottom: 8px
+
+          .sell-rating
+            display: flex
+
+            .month-sell,
+            .food-rating
+              font-size: 10px
+              color: rgb(147, 153, 159)
+              line-height: 14px
+
+            .month-sell
+              margin-right: 12px
+
+          .price-card
+            display: flex
+            justify-content: space-between
+
+            .now-old-price
+              display: flex
+
+              .food-price-now
+                font-size: 14px
+                line-height: 24px
+                color: rgb(240, 20, 20)
+                font-weight: 700
+                margin-right: 8px
+
+                .price-icon
+                  font-size: 10px
+                  font-weight: normal
+
+              .food-old-price
+                font-size: 10px
+                color: rgb(147, 153, 159)
+                font-weight: 700
+                line-height: 24px
+                text-decoration: line-through
+
+                .price-icon
+                  font-weight: normal
+
+  .slide-right-enter-active
+    transition: all 1s
+
+  .slide-right-enter, .slide-right-leave-to
+    transform: translate(100%, 0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

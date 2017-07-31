@@ -1,0 +1,73 @@
+@import "../../../static/common"
+
+.ratings
+  display: flex
+  flex-direction: column
+  overflow: hidden
+
+  .top-wrap
+    @include border-1px(#E6E7E8)
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .total-rate
+      width: 36.7%
+      margin: 18px auto
+      text-align: center
+      border-right: 1px solid #E6E7E8
+
+      .score
+        font-size: 24px
+        color: rgb(255, 153, 0)
+        line-height: 28px
+
+      .title
+        font-size: 12px
+        color: rgb(7, 17, 27)
+        line-height: 12px
+        margin-top: 6px
+
+      .compare
+        font-size: 10px
+        color: rgb(147, 153, 159)
+        line-height: 10px
+        margin-top: 8px
+
+    .total-star
+      width: 63.3%
+      padding: 0 24px
+      box-sizing: border-box
+
+      .star-box
+        margin-top: 8px
+        display: flex
+        line-height: 18px
+        align-items: center
+
+        &:first-child
+          margin-top: 0
+
+        .score,
+        .minute,
+        .title
+          font-size: 12px
+
+        .star-rate,
+        .minute,
+        .score
+          margin-left: 12px
+
+        .title
+          color: rgb(7, 17, 27)
+
+        .score
+          color: rgb(255, 153, 0)
+
+        .minute
+          color: rgb(147, 153, 159)
+
+
+
+
+

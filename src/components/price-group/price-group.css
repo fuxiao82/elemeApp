@@ -1,0 +1,21 @@
+.price-group {
+  display: flex; }
+  .price-group .food-price-now {
+    font-size: 14px;
+    line-height: 24px;
+    color: #f01414;
+    font-weight: 700;
+    margin-right: 8px; }
+    .price-group .food-price-now .price-icon {
+      font-size: 10px;
+      font-weight: normal; }
+  .price-group .food-old-price {
+    font-size: 10px;
+    color: #93999f;
+    font-weight: 700;
+    line-height: 24px;
+    text-decoration: line-through; }
+    .price-group .food-old-price .price-icon {
+      font-weight: normal; }
+
+/*# sourceMappingURL=price-group.css.map */

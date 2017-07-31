@@ -1,0 +1,79 @@
+@import "../../../static/common"
+
+.food-detail
+  background-color: #fff
+  width: 100%
+
+  .food-detail-wrap
+    .img-wrap
+      padding: 0 1px
+      @include border-1px(rgb(255, 255, 255))
+
+      & > img
+        width: 100%
+
+    .food-title-info
+      padding: 18px
+      box-sizing: border-box
+
+      .title
+        font-size: 14px
+        font-weight: 700
+        color: $colorFont
+        line-height: 14px
+
+      .sell-info
+        margin: 8px 0 0 0
+        font-size: 10px
+        color: $colorFontGray
+        line-height: 10px
+        display: flex
+
+        .rating-percent
+          margin: 0 0 0 12px
+
+      .price-card
+        display: flex
+        justify-content: space-between
+        margin: 18px 0 0 0
+        font-size: 14px
+        font-weight: 700
+        color: $colorFontRed
+        line-height: 24px
+
+        .add-to-cart
+          .add-btn
+            min-width: 74px
+            height: 24px
+            padding: 0 12px
+            font-size: 12px
+            border-radius: 12px
+            color: #fff
+            background-color: rgb(0, 160, 220)
+            border: none
+
+    .food-des
+      padding: 18px
+
+      .title
+        font-size: 14px
+        color: $colorFont
+        line-height: 14px
+
+      .description
+        font-size: 12px
+        color: rgb(77, 85, 93)
+        line-height: 24px
+        padding: 0 8px
+        margin: 6px 0 0 0
+
+    .food-rating
+
+      .title
+        font-size: 14px
+        color: $colorFont
+        line-height: 14px
+        padding: 18px 18px 0 18px
+
+
+

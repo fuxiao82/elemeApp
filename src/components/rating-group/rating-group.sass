@@ -1,0 +1,170 @@
+@import "../../../static/common"
+@import "../../../static/custom/icon.css"
+
+.rating-group
+
+  .like-tab
+    display: flex
+    padding: 18px
+    @include border-1px($colorBorder)
+
+    .tab-item
+      font-size: 12px
+      margin-left: 10px
+      padding: 8px
+      border-radius: 2px
+
+      &:first-child
+        margin-left: 0
+
+      &.active
+        color: #fff
+
+      .num
+        font-size: 10px
+
+    .all
+      background-color: #00A0DC
+
+    .like
+      background-color: #CCECF8
+
+    .unlike
+      background-color: #E9EBEC
+
+  .with-content
+    display: flex
+    @include border-1px($colorBorder)
+    padding: 18px
+
+    .icon
+      color: #B7BBBF
+      font-size: 20px
+      &.active
+        color: #00a0dc
+
+    .des
+      margin-left: 10px
+
+
+
+  .rating-list
+    max-height: 350px
+    overflow: hidden
+
+    .up-down
+      font-size: 12px
+      line-height: 16px
+
+      &.icon-thumb_up
+        color: #02A1DC
+
+      &.icon-thumb_down
+        color: #B7BBBF
+
+    .rating-ul
+      .rating-li
+        display: flex
+        padding: 18px 0
+        margin: 0 18px
+
+        @include border-1px($colorBorder)
+
+        .left-wrap
+          .avatar
+
+        .right-wrap
+          width: 100%
+          margin-left: 12px
+
+          .from-time
+            display: flex
+            justify-content: space-between
+
+            .from
+              font-size: 10px
+              color: $colorFont
+              line-height: 12px
+
+            .time
+              font-size: 10px
+              color: $colorFontGray
+              line-height: 12px
+
+          .star-time
+            margin-top: 4px
+            display: flex
+
+            .star-rate
+              padding-right: 6px
+
+            .delivery-time
+              font-size: 10px
+              color: $colorFontGray
+              line-height: 12px
+
+          .rating-content
+            font-size: 12px
+            color: $colorFont
+            line-height: 18px
+            margin-top: 6px
+
+          .des
+            margin-top: 8px
+            display: flex
+
+
+            .recommends
+              display: flex
+              flex-wrap: wrap
+
+              .recommend
+                border: 1px solid $colorBorder
+                border-radius: 2px
+                background-color: #ffffff
+                padding: 0 6px
+                box-sizing: border-box
+                line-height: 16px
+                max-width:  108px
+                margin-left: 6px
+                font-size: 9px
+                color: $colorFontGray
+
+                &:first-child
+                  margin-left: 0
+
+    .normal-rating-ul
+      .rating-li
+        padding: 16px 0
+        margin: 0 18px
+        @include border-1px($colorBorder)
+
+        .top-line
+          display: flex
+          justify-content: space-between
+
+          .time
+            font-size: 10px
+            color: $colorFontGray
+            line-height: 12px
+
+          .from-img
+            display: flex
+
+            .from
+              font-size: 10px
+              color: $colorFontGray
+              line-height: 12px
+
+            .avatar
+              margin: 0 0 0 6px
+              border-radius: 50%
+
+        .bottom-line
+          display: flex
+
+          .rating-content
+            margin: 0 0 0 4px
+            font-size: 12px
+            color: $colorFont
+            line-height: 16px
