@@ -1,0 +1,24 @@
+@import "../../../static/common"
+
+.support
+  font-size: 12px
+  color: #07111b
+  line-height: 14px
+  @include border-1px(rgba(7,17,27, .1))
+
+
+  .icon
+    &.decrease
+      @include with-icon("img/decrease_3", 12px)
+    &.discount
+      @include with-icon("img/discount_3", 12px)
+    &.guarantee
+      @include with-icon("img/guarantee_3", 12px)
+    &.invoice
+      @include with-icon("img/invoice_3", 12px)
+    &.special
+      @include with-icon("img/special_3", 12px)
+
+  .text
+    display: table-cell
+    vertical-align: middle

@@ -1,18 +1,18 @@
 <template>
   <div class="rating-group">
     <div class="like-tab border-1px">
-      <div :class="allShowClass" @click="showRating('all', $event)">
+      <div :class="allShowClass" @click="showRating('all')">
         {{typeContent.all}}&nbsp;<span class="num">{{ratings.length}}</span>
       </div>
-      <div :class="likeShowClass" @click="showRating('like', $event)">
+      <div :class="likeShowClass" @click="showRating('like')">
         {{typeContent.like}}&nbsp;<span class="num">{{likeCount}}</span>
       </div>
-      <div :class="unLikeShowClass" @click="showRating('unlike', $event)">
+      <div :class="unLikeShowClass" @click="showRating('unlike')">
         {{typeContent.unlike}}&nbsp;<span class="num">{{unlikeCount}}</span>
       </div>
     </div>
 
-    <div class="with-content border-1px" @click="onlyWithContent($event)">
+    <div class="with-content border-1px" @click="onlyWithContent">
       <i :class="['icon-check_circle', 'icon', {active: isWithContent}]"></i>
       <p class="des">只看有内容的评价</p>
     </div>
@@ -183,6 +183,14 @@
         return count
       }
     },
+    watch: {
+      showRatings (val) {
+        this.$nextTick(function () {
+          this.rateScroll.scrollTo(0, 0)
+          this.rateScroll.refresh()
+        })
+      }
+    },
     methods: {
       filterRatings (type) {
         let resultRating = []
@@ -217,25 +225,16 @@
 //        console.log(resultRating)
         return resultRating
       },
-      showRating (type, event) {
-        // 防止出现多次点击
-        if (!event._constructed) {
-          return false
-        }
-
+      showRating (type) {
         this.showRatings = this.filterRatings(type)
+      },
+      onlyWithContent () {
+        this.isWithContent = !this.isWithContent
+//        console.log(this.isWithContent)
       },
       filterNullText (rating) {
 //        console.log(!(rating.text === '' && this.isWithContent))
         return !(rating.text === '' && this.isWithContent)// 若选中“仅显示有内容的评价”，且当前项text为空
-      },
-      onlyWithContent (event) {
-        // 防止出现多次点击
-        if (!event._constructed) {
-          return false
-        }
-        this.isWithContent = !this.isWithContent
-//        console.log(this.isWithContent)
       },
       upDownClass (isUp) {
         return [

@@ -38,6 +38,7 @@ export default {
   created () {
     this.$http.get('/api/seller').then(response => {
       this.seller = response.body.data
+      console.log(this.seller)
     })
   }
 }
