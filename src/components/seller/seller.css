@@ -1,3 +1,229 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline; }
 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* custom */
+a {
+  color: #7e8c8d;
+  text-decoration: none;
+  -webkit-backface-visibility: hidden; }
+
+li {
+  list-style: none; }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px; }
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px; }
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px; }
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px; }
+
+html, body {
+  width: 100%; }
+
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent; }
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+@media (-webkit-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.7);
+    transform: scaleY(0.7); } }
+@media (-webkit-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5); } }
+@media (-webkit-device-pixel-ratio: 1), (min-device-pixel-ratio: 1) {
+  .border-1px::after {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1); } }
+.clearfix {
+  display: inline-block; }
+  .clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden; }
+
+.seller .seller-box {
+  position: absolute;
+  top: 180px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden; }
+  .seller .seller-box .title-wrap .top {
+    position: relative;
+    margin: 0 18px;
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between; }
+    .seller .seller-box .title-wrap .top::after {
+      position: absolute;
+      content: "";
+      border-top: 1px solid rgba(7, 17, 27, 0.1);
+      left: 0;
+      bottom: 0;
+      top: auto;
+      height: 1px;
+      width: 100%;
+      display: block; }
+    .seller .seller-box .title-wrap .top .left .title {
+      font-size: 14px;
+      color: #07111b;
+      line-height: 14px;
+      margin: 0 0 8px 0; }
+    .seller .seller-box .title-wrap .top .left .rating {
+      display: flex;
+      font-size: 10px;
+      line-height: 18px; }
+      .seller .seller-box .title-wrap .top .left .rating .text {
+        font-size: 10px;
+        color: #4d555d; }
+      .seller .seller-box .title-wrap .top .left .rating .count {
+        margin: 0 0 0 8px; }
+      .seller .seller-box .title-wrap .top .left .rating .sell-count {
+        margin: 0 0 0 12px; }
+    .seller .seller-box .title-wrap .top .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .seller .seller-box .title-wrap .top .right .collection {
+        width: 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .seller .seller-box .title-wrap .top .right .collection .icon {
+          color: #93999f;
+          font-size: 24px;
+          line-height: 24px;
+          margin: 0 0 4px 0; }
+          .seller .seller-box .title-wrap .top .right .collection .icon.active {
+            color: #f01414; }
+  .seller .seller-box .title-wrap .bottom {
+    display: flex;
+    justify-content: space-around; }
+    .seller .seller-box .title-wrap .bottom .detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 18px 0; }
+      .seller .seller-box .title-wrap .bottom .detail .text {
+        font-size: 10px;
+        color: #93999f;
+        line-height: 10px; }
+      .seller .seller-box .title-wrap .bottom .detail .price {
+        font-size: 24px;
+        font-weight: 200;
+        color: #07111b;
+        line-height: 24px;
+        margin: 4px 0 0 0; }
+  .seller .seller-box .notice-activity {
+    padding: 18px 18px 0 18px; }
+    .seller .seller-box .notice-activity .title {
+      font-size: 18px; }
+    .seller .seller-box .notice-activity .notice {
+      padding: 8px 12px;
+      font-size: 12px;
+      color: #f01414;
+      line-height: 24px; }
+    .seller .seller-box .notice-activity .sell-discount .support {
+      padding: 16px; }
+  .seller .seller-box .real-view {
+    padding: 18px; }
+    .seller .seller-box .real-view .title {
+      font-size: 18px;
+      margin: 0 0 12px 0; }
+    .seller .seller-box .real-view .img-wrap {
+      max-height: 90px;
+      white-space: nowrap; }
+      .seller .seller-box .real-view .img-wrap .img-box {
+        font-size: 0;
+        width: auto;
+        display: inline-block; }
+        .seller .seller-box .real-view .img-wrap .img-box .img-pic {
+          display: inline-block;
+          width: 120px;
+          height: 90px;
+          padding: 0 6px 0 0; }
+  .seller .seller-box .seller-infomation {
+    padding: 18px; }
+    .seller .seller-box .seller-infomation .title {
+      font-size: 18px;
+      margin: 0 0 12px 0; }
+    .seller .seller-box .seller-infomation .info {
+      font-size: 12px;
+      color: #07111b;
+      padding: 16px 12px;
+      position: relative; }
+      .seller .seller-box .seller-infomation .info::after {
+        position: absolute;
+        content: "";
+        border-top: 1px solid rgba(7, 17, 27, 0.1);
+        left: 0;
+        bottom: auto;
+        top: 0;
+        height: 1px;
+        width: 100%;
+        display: block; }
 
 /*# sourceMappingURL=seller.css.map */

@@ -114,6 +114,7 @@ body {
       border-top: 1px solid white;
       left: 0;
       bottom: 0;
+      top: auto;
       height: 1px;
       width: 100%;
       display: block; }

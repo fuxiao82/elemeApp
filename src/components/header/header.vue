@@ -5,19 +5,17 @@
         <img :src="seller.avatar" alt="avatar">
       </div>
       <div class="seller-info">
-        <div class="name with-icon">
-          {{seller.name}}
+        <div class="name">
+          <div class="icon"></div>
+          <p>{{seller.name}}</p>
         </div>
         <div class="description">
           {{seller.description}}/{{seller.deliveryTime}}分钟送达
         </div>
-        <div class="support">
-          <div :class="['supports', supportType[item.type]]" v-for="(item, index) in seller.supports"
-               :type="item.type" v-if="index === 0">
-            {{item.description}}
-          </div>
-          <div class="support-fold" @click="showDetail">
-            {{seller.supports ? seller.supports.length : 0}}个
+        <div class="support-fold" v-if="seller.supports">
+          <i-support :support="seller.supports[0]" key="headerSupport" :isWhite="true" type="hideborder"></i-support>
+          <div class="fold-icon" @click="showDetail">
+            {{seller.supports.length}}个
           </div>
         </div>
       </div>
@@ -30,10 +28,11 @@
     </div>
 
     <div class="detail" v-show="isShowDetail">
-
       <div class="content-wrap">
         <div class="content-main">
+
           <div class="title">{{seller.name}}</div>
+
           <div class="stars">
             <div v-for='(item, index) in STAR_COUNT'
                  :class="['star',
@@ -43,17 +42,14 @@
             </div>
           </div>
 
-          <div class="support">
+          <div class="support-group">
             <div class="titles">
               <div class="split-line"></div>
                 优惠信息
               <div class="split-line"></div>
             </div>
             <div class="content">
-              <div :class="['supports', supportType[item.type]]" v-for="(item, index) in seller.supports"
-                   :type="item.type">
-                {{item.description}}
-              </div>
+              <i-support key="headerContentSupport" :support="support" :isWhite="true" v-for="support in seller.supports"></i-support>
             </div>
           </div>
 
@@ -80,8 +76,13 @@
 
 
 <script type="text/ecmascript-6">
+  import support from '../support/support'
+
   export default {
     name: 'header',
+    components: {
+      'i-support': support
+    },
     props: {
       seller: {
         type: Object

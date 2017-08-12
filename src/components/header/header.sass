@@ -5,22 +5,6 @@
   background: rgba(7, 17, 27, .5)
   overflow: hidden
 
-  .supports
-    font-size: 10px
-    color: #fff
-    font-weight: 200
-
-    &.decrease
-      @include with-icon("img/decrease_1", 12px)
-    &.discount
-      @include with-icon("img/discount_1", 12px)
-    &.guarantee
-      @include with-icon("img/guarantee_1", 12px)
-    &.invoice
-      @include with-icon("img/invoice_1", 12px)
-    &.special
-      @include with-icon("img/special_1", 12px)
-
   .seller
     display: flex
     align-items: center
@@ -39,8 +23,14 @@
         font-size: 16px
         color: #fff
         font-weight: bold
+        display: flex
         margin: 4px auto 8px auto
-        @include with-icon("img/brand", 25px, 15px)
+
+        .icon
+          margin: 0 6px 0 0
+          width: 25px
+          height: 15px
+          @include bg-image("img/brand")
 
       .description
         font-size: 12px
@@ -49,12 +39,12 @@
         line-height: 12px
         margin: 0 0 10px 0
 
-      .support
+      .support-fold
         display: flex
         justify-content: space-between
         line-height: 24px
 
-        .support-fold
+        .fold-icon
           border-radius: 16px
           background: rgba(0, 0, 0, .2)
           font-size: 10px
@@ -65,6 +55,8 @@
           height: 24px
           width: 48px
           @include pull-right(10px, #fff, #696d71, 2px)
+
+
 
   .bulletin
     @include pull-right(10px, #fff, #696d71, 2px)
@@ -79,6 +71,7 @@
       color: #fff
       font-weight: 200
       line-height: 28px
+
   .background
     position: absolute
     left: 0
@@ -121,12 +114,6 @@
           line-height: 16px
           text-align: center
 
-        .titles
-          display: flex
-          justify-content: space-around
-          align-items: center
-          font-size: 15px
-          margin: 28px auto 24px auto
 
         .stars
           display: flex
@@ -144,17 +131,25 @@
             &.star-on
               @include bg-image('img/star24_on')
 
-        .support
+        .support-group
+          .titles
+            display: flex
+            justify-content: space-around
+            align-items: center
+            font-size: 15px
+            margin: 28px auto 24px auto
           .content
             padding: 0 12px
-            .supports
-              line-height: 12px
-              font-size: 12px
-              font-weight: 200
-              color: #fff
-              margin-bottom: 12px
 
+            .support
+              padding: 12px
         .bulletins
+          .titles
+            display: flex
+            justify-content: space-around
+            align-items: center
+            font-size: 15px
+            margin: 28px auto 24px auto
           .bulletin-text
             font-size: 12px
             line-height: 24px

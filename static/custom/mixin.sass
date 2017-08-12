@@ -7,17 +7,18 @@
   &:after
     clear: both
 
-@mixin border-1px($color)
+@mixin border-1px($color, $position: bottom)
   position: relative
   &::after
     position: absolute
     content: ''
     border-top: 1px solid $color
     left: 0
-    bottom: 0
+    bottom: if($position == 'bottom', 0, auto)
+    top: if($position == 'bottom', auto, 0)
     height: 1px
     width: 100%
-    display: block
+    display: if($position == 'none', none, block)
 
 @mixin bg-image($url)
   background-image: url($url + "@2x.png")

@@ -224,6 +224,7 @@ body {
         border-top: 1px solid rgba(7, 17, 27, 0.1);
         left: 0;
         bottom: 0;
+        top: auto;
         height: 1px;
         width: 100%;
         display: block; }
@@ -247,6 +248,7 @@ body {
           border-top: 1px solid rgba(7, 17, 27, 0.1);
           left: 0;
           bottom: 0;
+          top: auto;
           height: 1px;
           width: 100%;
           display: block; }

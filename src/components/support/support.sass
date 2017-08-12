@@ -4,21 +4,30 @@
   font-size: 12px
   color: #07111b
   line-height: 14px
-  @include border-1px(rgba(7,17,27, .1))
+  @include border-1px(rgba(7,17,27, .1), 'top')
+  display: flex
+  align-items: center
+
+  &.hide-border
+    @include border-1px(rgba(7,17,27, .1), 'none')
 
 
   .icon
+    margin: 0 6px 0 0
+    width: 16px
+    height: 16px
+
     &.decrease
-      @include with-icon("img/decrease_3", 12px)
+      @include bg-image("img/decrease_3")
     &.discount
-      @include with-icon("img/discount_3", 12px)
+      @include bg-image("img/discount_3")
     &.guarantee
-      @include with-icon("img/guarantee_3", 12px)
+      @include bg-image("img/guarantee_3")
     &.invoice
-      @include with-icon("img/invoice_3", 12px)
+      @include bg-image("img/invoice_3")
     &.special
-      @include with-icon("img/special_3", 12px)
+      @include bg-image("img/special_3")
 
   .text
-    display: table-cell
-    vertical-align: middle
+    &.white
+      color: #fff

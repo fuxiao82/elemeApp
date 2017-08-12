@@ -1,7 +1,7 @@
 <template>
-    <div class="support">
-      <span :class="['icon', supportType[support.type]]"></span>
-      <p class="text">
+    <div :class="['support', {'hide-border': type === 'hideborder'}]">
+      <div :class="['icon', supportType[support.type]]"></div>
+      <p :class="['text',{'white': isWhite}]">
         {{support.description}}
       </p>
     </div>
@@ -11,6 +11,14 @@
   export default {
     name: 'support',
     props: {
+      type: {
+        type: String,
+        default: ''
+      },
+      isWhite: {
+        type: Boolean,
+        default: false
+      },
       support: {
         type: Object
       }
