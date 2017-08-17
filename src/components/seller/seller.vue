@@ -76,10 +76,6 @@
 
       </div>
     </div>
-    <shopcart :deliver-price="seller.deliveryPrice"
-              :min-price="seller.minPrice"
-              :select-foods="checkFoods">
-    </shopcart>
   </div>
 </template>
 
@@ -125,21 +121,7 @@
     mounted () {
       this.initScroll()
     },
-    created () {
-//      this.initScroll()
-    },
     computed: {
-      checkFoods () {
-//        let select = []
-//        this.goods.forEach((good) => {
-//          good.foods.forEach((food) => {
-//            if (food.count > 0) {
-//              select.push(food)
-//            }
-//          })
-//        })
-//        return select
-      },
       collectionClass () {
         return [
           `icon`,

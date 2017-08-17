@@ -165,8 +165,7 @@ body {
       font-size: 16px;
       font-weight: bold;
       color: #919396;
-      margin: 0 auto;
-      flex: 1; }
+      margin: 0 12px 0 auto; }
     .shopcart .left-wrap .split-line {
       width: 1px;
       height: 25px;
@@ -174,7 +173,8 @@ body {
     .shopcart .left-wrap .des {
       font-size: 16px;
       color: rgba(255, 255, 255, 0.4);
-      margin-left: 12px; }
+      margin: 0 12px;
+      flex: 1; }
   .shopcart .right-wrap {
     width: 105px;
     flex: 0 0 105px;
