@@ -42,7 +42,6 @@
 @mixin pull-right($width, $color, $colorTop, $bold)
   position: relative
 
-  &:before,
   &:after
     content: ''
     position: absolute
@@ -57,17 +56,22 @@
     display: inline-block
     vertical-align: middle
 
-  &:before
-    border: $width/2 solid transparent
-    border-left-color: $color
 
   &:after
-    width: $width - $bold
-    height: $width - $bold
-    border: ($width - $bold)/2 solid transparent
-    border-left-color: $colorTop
-    right: ($width - $bold) / 2  - 1
-    z-index: 2
+    content: ""
+    position: absolute
+    right: 5px
+    top: 50%
+    width: 5px
+    height: 5px
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    display: inline-block
+    vertical-align: middle
+    border-right: 1px solid #fff
+    border-bottom: 1px solid #fff
+    transform: rotate(-45deg) translate(0,-50%)
 
 @mixin ellipsis
   white-space: nowrap

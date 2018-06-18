@@ -114,7 +114,7 @@
           click: true
         })
         this.imgScroll = new BScroll(this.$refs.imgWrap, {
-          scrollX: 'true'
+          scrollX: true
         })
       }
     },
